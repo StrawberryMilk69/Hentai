@@ -1,0 +1,129 @@
+local getUi = ui.get
+
+local uidToEntIndex = client.userid_to_entindex
+local getLocalPlayer = entity.get_local_player
+local isEnemy = entity.is_enemy
+
+local console_cmd = client.exec
+
+local hentai = ui.new_checkbox("MISC", "Miscellaneous", "Hentai killsay")
+local function on_player_death(i)
+
+	if getUi(hentai) then
+
+    local victimUID = i.userid
+    local attackerUID = i.attacker
+
+    if victimUID == nil or attackerUID == nil then
+
+      return
+
+    end
+
+    local victimEntIndex = uidToEntIndex(victimUID)
+    local attackerEntIndex = uidToEntIndex(attackerUID)
+
+    if attackerEntIndex == getLocalPlayer() and isEnemy(victimEntIndex) then
+
+      if i.headshot then
+        Hentai1 = client.random_int(1,15)
+      else
+       Hentai2 = client.random_int(1,15)
+	   end
+
+      if Hentai1 == 1 then
+        console_cmd("say S-Sorry onii-chan p-please d-do me harder ;w;")
+      end
+      if Hentai1 == 2 then
+        console_cmd("say Y-You got me all wet now senpai!")
+      end
+      if Hentai1 == 3 then
+        console_cmd("say D-Don't t-touch me there senpai")
+      end
+      if Hentai1 == 4 then
+        console_cmd("say P-Please l-love me harder oniichan ohh grrh aahhhh~!")
+      end
+      if Hentai1 == 5 then
+        console_cmd("say Give me all your cum senpai ahhhhh~")
+      end
+      if Hentai1 == 6 then
+        console_cmd("say Give me all your cum senpai ahhhhh~")
+      end
+      if Hentai1 == 7 then
+        console_cmd("say F-Fuck me harder chan!")
+      end
+      if Hentai1 == 8 then
+        console_cmd("say Oh my god I hate you so much senpai but please k-keep fucking me harder! ahhh~")
+      end
+      if Hentai1 == 9 then
+        console_cmd("say D-do you like my stripped panties getting soaked by you and your hard cock? ehhh master you're so lewd ^0^")
+      end
+      if Hentai1 == 10 then
+        console_cmd("say kun your cute little dick between my pussy lips looks really cute, I'm blushing")
+      end
+      if Hentai1 == 11 then
+        console_cmd("say oniichan my t-toes are so warm with your cum all over them uwu~")
+      end
+      if Hentai1 == 12 then
+        console_cmd("say hehe don't touch me there oni-chann UwU~")
+      end
+      if Hentai1 == 13 then
+        console_cmd("say Your cum is all over my wet clit M-master~")
+      end
+      if Hentai1 == 14 then
+        console_cmd("say It Feels like you're pounding me with the force of a thousand suns senpai~")
+      end
+      if Hentai1 == 15 then
+        console_cmd("say Hey kun, Can I have some semen?")
+      end
+      if Hentai2 == 1 then
+        console_cmd("say senpai your cock is already throbbing from my huge tits~")
+      end
+      if Hentai2 == 2 then
+        console_cmd("say M-master d-dont spank my petite butt so hard ahhhH~~~ you're getting me so w-wet~")
+      end
+      if Hentai2 == 3 then
+        console_cmd("say Fill up my baby chamber with your semen kun ^-^")
+      end
+      if Hentai2 == 4 then
+        console_cmd("say You're such a pervert for filling me up with your baby batter senpai~")
+      end
+      if Hentai2 == 5 then
+        console_cmd("say S-stop senpai if we keep making these lewd sounds im going to cum~")
+      end
+      if Hentai2 == 6 then
+        console_cmd("say Lets take this swimsuit off already <3 i'll drink your unknown melty juice")
+      end
+      if Hentai2 == 7 then
+        console_cmd("say You're looking at porn when you could be using your little sister instead!")
+      end
+      if Hentai2 == 8 then
+        console_cmd("say Master does it feel good when I slide by tits up and down on your cute manly part?")
+      end
+      if Hentai2 == 9 then
+        console_cmd("say Terrorist actions against my boipussy are not acceptable!nyaa~!!")
+      end
+      if Hentai2 == 10 then
+        console_cmd("say Situations where cute boys are forced to cross-dress and then get violated really turn me on!")
+      end
+      if Hentai2 == 11 then
+        console_cmd("say Your bed is so clean, senpai! Want some loli juice on it?")
+      end
+      if Hentai2 == 12 then
+        console_cmd("say Wah! What are we gonna do on the bed?")
+      end
+      if Hentai2 == 13 then
+        console_cmd("say pls cuddle and pet me nyaa~!! don't forget to stuff me x3")
+      end
+      if Hentai2 == 14 then
+        console_cmd("say please daddy my boipussy can only take so much of your hot semen~!")
+      end
+      if Hentai2 == 15 then
+        console_cmd("say xD!")
+      end 
+	  
+     end
+   end
+end
+--liluwu tweaked this lua :3
+client.set_event_callback("player_death", on_player_death)
